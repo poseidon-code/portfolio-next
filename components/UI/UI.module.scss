@@ -1,0 +1,59 @@
+.background_video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: -webkit-fill-available;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.bars {
+    position: absolute;
+    margin-bottom: -0.3rem;
+
+    .bar {
+        background: #fff;
+        bottom: 1px;
+        height: 3px;
+        position: absolute;
+        width: 3px;
+        animation: sound 0ms -800ms linear infinite alternate;
+    }
+}
+
+.pause > .bar {
+    animation: none;
+}
+
+@keyframes sound {
+    0% {
+        height: 3px;
+    }
+    100% {
+        height: 28px;
+    }
+}
+
+@function randomNum($min, $max) {
+    $rand: random();
+    $randomNum: $min + floor($rand * (($max - $min) + 1));
+    @return $randomNum;
+}
+
+@for $i from 1 through 10 {
+    .bar:nth-child(#{$i}) {
+        left: #{1 + (($i - 1) * 4)}px;
+        animation-duration: #{randomNum(400, 500)}ms;
+    }
+}
+
+.date_time {
+    font-family: inherit;
+    text-align: left;
+    line-height: 1;
+    width: 30%;
+    pointer-events: none;
+    user-select: none;
+}
