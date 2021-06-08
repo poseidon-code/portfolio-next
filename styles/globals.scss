@@ -1,0 +1,42 @@
+@use './utils';
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Odibee+Sans&family=Bungee+Hairline&family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: utils.$font-mono;
+    color: #fff;
+}
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    width: 100%;
+    background-color: black;
+    -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: utils.$font-heading;
+}
+
+a,
+button {
+    all: unset;
+    color: inherit;
+    cursor: pointer;
+    display: block;
+}
+
+svg {
+    width: 1em;
+    height: 1em;
+}
