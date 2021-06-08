@@ -7,6 +7,7 @@
 
 # testing
 /coverage
+/public/backgrounds
 
 # next.js
 /.next/
