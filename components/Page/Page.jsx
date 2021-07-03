@@ -19,6 +19,7 @@ const Page = (props) => {
     };
 
     useEffect(() => {
+        if (window.innerWidth <= 800) setPlay(false);
         fetch('https://ipapi.co/json/')
             .then((res) => res.json())
             .then((data) => {
