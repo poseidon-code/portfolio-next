@@ -5,6 +5,7 @@ const BackgroundVideo = (props) => {
     const audioRef = useRef();
 
     useEffect(() => {
+        audioRef.current.volume = 0.4;
         if (props.play === true) audioRef.current.play();
         else audioRef.current.pause();
     }, [props.play]);
